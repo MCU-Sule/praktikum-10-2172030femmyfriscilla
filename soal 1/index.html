@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Femmy Friscilla Susilo 2172030">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500&display=swap" rel="stylesheet">
+    <title>Soal 1</title>
+</head>
+<style>
+    *{
+        margin :0; 
+    }
+    body{
+        font-family: 'poppins',sans-serif;
+    }
+    div{
+        width: 100%;
+        padding-left: 10px;
+        font-size: 20px;
+    }
+    .isi{
+        padding-top: 15px;
+        padding-bottom: 2px;
+        font-size: 18px;
+        display: inline-flex;
+    }
+    .isi2{
+        font-size: 18px; 
+        display: inline-flex;
+        margin-bottom: 30px;
+        margin-top: 10px;
+    }
+    #satu{
+        width: 20px;
+        
+    }
+    #mencari{
+        background-color: lightblue;
+    }
+    #gacha{
+        background-color: lightgreen;
+    }
+
+</style>
+<body>
+    <!-- penjumlahan,pengurangan,bilangan angka random 100-999
+         pembagian angka random 0-100
+    -->
+
+    <!-- penjumlahan -->
+    <div style='background-color: rgb(255,140,0);'>
+        <p><b>Penjumlahan</b></p>
+    </div>   
+    <script>
+        let angka1 = Math.floor(Math.random()*899);
+        let random = 100+angka1;
+        let angka2 = Math.floor(Math.random()*899);
+        let randomm = 100+angka2;
+        function angkaRandomPenjumlahan(){
+            document.querySelector("#plus1").value = random;
+            document.querySelector("#plus2").value = randomm;
+        } 
+        function hasilPenjumlahan(){
+            let a = document.querySelector("#jawabanPlus").value;
+            let b = parseInt(document.querySelector("#plus1").value);
+            let c = parseInt(document.querySelector("#plus2").value);
+            let d = b+c;
+            if(a == d){
+                document.querySelector(".jawabanPlus").innerHTML= "jawaban anda benar";
+            }
+            else{
+                document.querySelector(".jawabanPlus").innerHTML= "jawaban anda salah";
+            }
+            console.log(a);
+            console.log(b);
+            console.log(c);
+            console.log(d);
+
+        }
+    </script>
+    <div class="isi">
+        <input type="number" id="plus1" disabled> &nbsp;+&nbsp; <input type="number" id="plus2" disabled> <p>&nbsp;=&nbsp;</p>
+        <input type="number" id="jawabanPlus"> &nbsp;&nbsp;
+        <input type="button" id="mencari" value="Hitung" onclick="hasilPenjumlahan()"><br>
+    </div>
+    <div class="isi2">
+        <input type="button" id="gacha" value="Random" onclick="angkaRandomPenjumlahan()">
+        <div class="jawabanPlus" style="width: 100%; height: 20px;"></div>
+    </div>
+      
+    
+    
+
+<!-- pengurangan -->
+    <div style='background-color: rgb(0,191,255);'>
+        <p><b>Pengurangan</b></p>
+    </div>
+    <script>
+        let angka3 = Math.floor(Math.random()*899);
+        let random2 = 100+angka3;
+        let angka4 = Math.floor(Math.random()*899);
+        let randomm3 = 100+angka4;
+        function angkaRandomMin(){
+            document.querySelector("#min1").value = random2;
+            document.querySelector("#min2").value = randomm3;
+        }
+        function hasilMinus(){
+            let ka = document.querySelector("#jawabanMinus").value;
+            let ki = parseInt(document.querySelector("#min1").value);
+            let ku = parseInt(document.querySelector("#min2").value);
+            let ke = ki-ku;
+            if(ka == ke){
+                document.querySelector(".jawabanMin").innerHTML="jawaban anda benar";
+            }
+            else{
+                document.querySelector(".jawabanMin").innerHTML="jawaban anda salah";
+            }
+            console.log(ka);
+            console.log(ki);
+            console.log(ku);
+            console.log(ke);
+        }
+        
+    </script>
+    <div class="isi">
+        <input type="number" id="min1" disabled> &nbsp;-&nbsp; <input type="number" id="min2" disabled> <p id="dua">&nbsp;=&nbsp;</p>
+        <input type="number" id="jawabanMinus"> &nbsp;&nbsp;
+        <input type="button" id="mencari" value="Hitung" onclick="hasilMinus()"><br>
+    </div>
+    <div class="isi2">        
+        <input type="button" id="gacha" value="Random" onclick="angkaRandomMin()">
+        <div class="jawabanMin" style="width: 100%; height: 20px;"></div>
+    </div>
+
+
+<!-- perkalian -->
+    <div style='background-color: rgb(255,0,147);'>
+        <p><b>Perkalian</b></p>
+    </div>
+    <script>
+        let angka5 = Math.floor(Math.random()*100);
+        let angka6 = Math.floor(Math.random()*100);
+        function angkaRandomKali(){
+            document.querySelector("#kal1").value = angka5;
+            document.querySelector("#kal2").value = angka6;
+        }
+        function hasilKali(){
+            let ra = document.querySelector("#jawabankali").value;
+            let ri = parseInt(document.querySelector("#kal1").value);
+            let ru = parseInt(document.querySelector("#kal2").value);
+            let re = ri*ru;
+            if (re == ra){
+                document.querySelector(".jawabanKalii").innerHTML = "jawaban anda benar"
+            }
+            else{
+                document.querySelector(".jawabanKalii").innerHTML = "jawaban anda salah"
+            }
+            console.log(ra);
+            console.log(ri);
+            console.log(ru);
+            console.log(re);
+        
+        }
+    </script>
+    <div class="isi"> 
+        <input type="number" id="kal1" disabled> &nbsp;*&nbsp; <input type="number" id="kal2" disabled> <p id="tiga">&nbsp;=&nbsp;</p>
+        <input type="number" id="jawabankali"> &nbsp;&nbsp;
+        <input type="button" id="mencari" value="Hitung" onclick="hasilKali()"><br>
+    </div>
+    <div class="isi2">
+        <input type="button" id="gacha" value="Random" onclick="angkaRandomKali()">
+        <div class="jawabanKalii"></div>
+    </div>
+
+
+<!-- bilangan -->
+    <div style='background-color: rgb(255,99,71);'>
+        <p><b>Bilangan</b></p>
+    </div>
+    <script>
+        let angka7 = Math.floor(Math.random()*899);
+        let random3 = 100+angka7;
+        function angkaRandomBil(){
+            document.querySelector("#bil").value = random3;
+        }
+        function hasilBil(){
+            let la = document.querySelector("#bil").value;
+            let li = document.querySelector("#bil1").value;
+            let lu = document.querySelector("#bil2").value;
+            let le = document.querySelector("#bil3").value;
+            let lo = li+lu+le;
+            if ( lo == la ){
+                document.querySelector(".jawabanbil").innerHTML= "jawaban anda benar";
+            }
+            else{
+                document.querySelector(".jawabanbil").innerHTML= "jawaban anda salah";
+            }
+            console.log(la); 
+            console.log(li); 
+            console.log(lu); 
+            console.log(le); 
+            console.log(lo);
+        }
+    </script>
+    <div class="isi">
+        <input type="text" id="bil" disabled> <p id="empat">&nbsp;=&nbsp;</p>
+        <input type="text" id="bil1"> &nbsp;,&nbsp; <input type="text" id="bil2"> &nbsp;,&nbsp; <input type="text" id="bil3"> &nbsp;&nbsp;
+        <input type="button" id="mencari" value="Hitung" onclick="hasilBil()">
+    </div>
+    <div class="isi2">
+        <input type="button" id="gacha" value="Random" onclick="angkaRandomBil()">
+        <div class="jawabanbil" style="width: 100%; height: 20px;"></div>
+    </div>
+  
+</body>
+</html>

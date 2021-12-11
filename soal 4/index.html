@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Femmy Friscilla Susilo 2172030">
+    <title>Soal 4</title>
+    
+</head>
+<script>
+    document.addEventListener("mousemove", bola);
+    function bola(e){
+        var gerak = document.querySelector("#bergerak");
+        gerak.style.left =e.pageX+"px";
+        gerak.style.top  =e.pageY+"px"; 
+        console.log("gerak")
+    }
+</script>
+<body>
+    <div id="bergerak" style="width: 30px; height: 30px; border-radius: 50%; background-color: red; border: black 2px; position: absolute;"></div>
+</body>
+</html>
